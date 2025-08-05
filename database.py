@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 import os
 
 DB_USER = "plansul04"
-DB_PASS = "SENHA_AQUI"
+DB_PASS = "A33673170a"
 DB_HOST = "mysql.plansul.kinghost.net"
 DB_NAME = "plansul04"
 DB_PORT = 3306
