@@ -1,6 +1,5 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-import os
 
 DB_USER = "plansul04"
 DB_PASS = "A33673170a"
