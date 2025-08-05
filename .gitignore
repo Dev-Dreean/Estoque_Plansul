@@ -21,3 +21,22 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# Ignorar tudo que não é do back-end
+__pycache__/
+.venv/
+node_modules/
+.env
+*.log
+*.pyc
+*.pyo
+*.pyd
+package.json
+package-lock.json
+public/
+src/
+index.html
+README.md
+requirements.txt.txt
+
