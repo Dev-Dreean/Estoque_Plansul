@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, Date, Time, ForeignKey, CHAR
 from database import Base
 
 class Usuario(Base):
-    __tablename__ = "USUARIO"
+    __tablename__ = "usuario"
     NUSEQUSUARIO = Column(Integer, primary_key=True, index=True)
     CDMATRFUNCIONARIO = Column(CHAR(8), unique=True)
     NMLOGIN = Column(String(30))
@@ -16,14 +16,15 @@ class Usuario(Base):
     VERSIST = Column(String(20))
 
 class AcessoTela(Base):
-    __tablename__ = "ACESSOTELA"
+    __tablename__ = "acessotela"
     NUSEQTELA = Column(Integer, primary_key=True, index=True)
     DETELA = Column(String(100))
     NMSISTEMA = Column(String(60))
     FLACESSO = Column(CHAR(1))
 
 class AcessoUsuario(Base):
-    __tablename__ = "ACESSOUSUARIO"
-    NUSEQTELA = Column(Integer, ForeignKey("ACESSOTELA.NUSEQTELA"), primary_key=True)
-    CDMATRFUNCIONARIO = Column(CHAR(8), ForeignKey("USUARIO.CDMATRFUNCIONARIO"), primary_key=True)
-    INACESSO = Column(CHAR(1))  # 'S' ou 'N'
+    __tablename__ = "acessousuario"
+    NUSEQTELA = Column(Integer, ForeignKey("acessotela.NUSEQTELA"), primary_key=True)
+    CDMATRFUNCIONARIO = Column(CHAR(8), ForeignKey("usuario.CDMATRFUNCIONARIO"), primary_key=True)
+    INACESSO = Column(CHAR(1))
+
